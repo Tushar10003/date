@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Small Question...</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- html2canvas library for taking screenshots -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <!-- STEP 1: The Proposal -->
+        <div id="step-1" class="card active">
+            <span class="badge">A SMALL QUESTION</span>
+            <h2>Will you go on a date with me?</h2>
+            <p>Take your time. There is really only one right answer here.</p>
+            <div class="gif-container">
+                <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3VwZ3M3cXN0ZndpNm1wOTZ4b3E4bXN5Ym81b3R6b3pnd3g0ZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/cLS1cfxvGOPVpf9g3y/giphy.gif" alt="Cute waiting cat">
+            </div>
+            <div class="btn-group">
+                <button id="yes-btn-1" class="btn btn-yes">❤️ Yes, I'd love to</button>
+                <button id="no-btn" class="btn btn-no">No</button>
+            </div>
+        </div>
+
+        <!-- STEP 2: Date & Time Selection -->
+        <div id="step-2" class="card">
+            <span class="badge">STEP 1 OF 2</span>
+            <h2>When works for you?</h2>
+            <p>Pick a date and time — I'll make it special! ✨</p>
+            
+            <div class="form-group">
+                <label for="date-picker">DATE</label>
+                <!-- Locked to July 2026 -->
+                <input type="date" id="date-picker" min="2026-07-01" max="2026-07-31" value="2026-07-17">
+            </div>
+
+            <div class="form-group">
+                <label for="time-picker">TIME</label>
+                <select id="time-picker">
+                    <option value="12:00 PM">12:00 PM</option>
+                    <option value="1:00 PM">1:00 PM</option>
+                    <option value="2:00 PM">2:00 PM</option>
+                    <option value="3:00 PM">3:00 PM</option>
+                    <option value="4:00 PM">4:00 PM</option>
+                    <option value="5:00 PM">5:00 PM</option>
+                    <option value="6:00 PM" selected>6:00 PM</option>
+                    <option value="7:00 PM">7:00 PM</option>
+                    <option value="8:00 PM">8:00 PM</option>
+                </select>
+            </div>
+
+            <button id="submit-details" class="btn btn-yes">It's a date! ❤️</button>
+        </div>
+
+        <!-- STEP 3: Final Ticket / Confirmation -->
+        <div id="step-3" class="card">
+            <div id="capture-area" class="ticket">
+                <span class="badge success">🎉 IT'S A DATE!</span>
+                <h2 style="margin-bottom: 5px;">See you soon! 🌹</h2>
+                
+                <div class="ticket-details">
+                    <div class="detail-box">
+                        <span class="icon">📅</span>
+                        <p id="final-date">July 17, 2026</p>
+                    </div>
+                    <div class="detail-box">
+                        <span class="icon">⏰</span>
+                        <p id="final-time">6:00 PM</p>
+                    </div>
+                </div>
+
+                <div class="gif-container">
+                    <img src="https://media.giphy.com/media/14q7kvYacZ2v3W/giphy.gif" alt="Happy dance puppy">
+                </div>
+                <p class="footer-note">Can't wait to see you! ❤️</p>
+            </div>
+            
+            <button id="download-btn" class="btn btn-download">📸 Download Invitation</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
